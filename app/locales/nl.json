@@ -1,0 +1,9 @@
+{
+  "brand": "VDVD - $t(__pagename__)",
+  "pack": "Pakken",
+  "unpack": "Uitpakken",
+  "config": "Config",
+  "box": "Doos __id__",
+  "box_plural": "Dozen",
+  "addBox": "Een doos toegevoegen"
+}

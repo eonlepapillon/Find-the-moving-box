@@ -1,0 +1,9 @@
+{
+  "brand": "FTMB - $t(__pagename__)",
+  "pack": "Packing",
+  "unpack": "Unpacking",
+  "config": "Config",
+  "box": "Box __id__",
+  "box_plural": "Boxes",
+  "addBox": "Add a box"
+}

@@ -1,0 +1,10 @@
+<div class="boxes">
+  <table class="table table-striped table-bordered">
+    <tbody>
+      <tr ng-repeat="box in boxes" >
+        <td ng-i18next="[i18next]({id:{{box.id}}})box" ng-click="select({id: box.id})"></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success" ng-i18next="addBox" ng-click="add()"></button>
+</div>
