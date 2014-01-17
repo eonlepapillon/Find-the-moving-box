@@ -1,9 +1,28 @@
 {
-  "brand": "VDVD - $t(__pagename__)",
+  "fullbrand": "Vind de verhuisdoos - $t(__pagename__)",
+  "brand": "$t(__pagename__)",
   "pack": "Pakken",
   "unpack": "Uitpakken",
   "config": "Config",
+
   "box": "Doos __id__",
   "box_plural": "Dozen",
-  "addBox": "Een doos toegevoegen"
+  "addBox": "Een doos toegevoegen",
+
+  "stuff": {
+    "add":{
+      "button": "Toegevoegen",
+      "speech": {
+        "command": "Oké *term",
+        "info": "Zeg \"Oké wc papier\""
+      }
+    },
+    "search":{
+      "button": "Zoek",
+      "speech": {
+        "command": "Zoek *term",
+        "info": "Zeg \"Zoek wc papier\""
+      }
+    }
+  }
 }

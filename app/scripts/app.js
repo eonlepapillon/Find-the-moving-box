@@ -4,7 +4,8 @@ angular.module('findTheMovingBoxApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'jm.i18next'
+  'jm.i18next',
+  'ngAnnyang'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,11 +25,15 @@ angular.module('findTheMovingBoxApp', [
         redirectTo: '/pack'
       });
   })
-  .config(['$i18nextProvider', function ($i18nextProvider) {
+  .config(function ($i18nextProvider) {
     $i18nextProvider.options = {
-        preload: ['en', 'nl'],
-        useLocalStorage: false,
-        fallbackLng: 'en',
-        resGetPath: '../locales/__lng__.json'
-      };
-  }]);
+      preload: ['en', 'nl'],
+      useLocalStorage: false,
+      fallbackLng: 'en',
+      resGetPath: '../locales/__lng__.json'
+    };
+  })
+  .config(function(ngAnnyangProvider) {
+    ngAnnyangProvider.setLanguage('');
+    ngAnnyangProvider.debug();
+  });

@@ -3,10 +3,16 @@
 angular.module('findTheMovingBoxApp')
   .directive('stuff', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'views/stuff.html',
       restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the stuff directive');
+      replace: true,
+      transclude: true,
+      scope: {
+        order: '@',
+        filter: '='
+      },
+      controller: function($scope, Storage) {
+        $scope.stuff = Storage.getStuff();
       }
     };
   });

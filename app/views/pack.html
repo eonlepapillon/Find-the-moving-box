@@ -5,6 +5,9 @@
     <boxes select="selectBox(id)"></boxes>
   </div>
   <div class="col-xs-12 col-md-8">
-    <h1 ng-i18next="[i18next]({id:{{selectedBox}}})box"></h1>
+    <h1 ng-i18next="[i18next]({id:{{boxid}} })box"></h1>
+    <stuff>
+      <add-stuff boxid="{{boxid}}"></add-stuff>
+    </stuff>
   </div>
 </div>

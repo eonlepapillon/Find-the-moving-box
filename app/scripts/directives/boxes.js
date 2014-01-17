@@ -9,27 +9,19 @@ angular.module('findTheMovingBoxApp')
       scope: {
         select: '&'
       },
-      controller: function($scope) {
-        var lastId;
+      controller: function($scope, Storage) {
+        var lastId = Storage.getLastBox().id;
 
-        $scope.boxes = [
-          {
-            id: 1
-          }
-        ];
-
-        $scope.$watch('boxes', function() {
-          lastId = _.max($scope.boxes, function(b) {
-            return b.id;
-          }).id;
-        });
+        $scope.boxes = Storage.getBoxes();
 
         $scope.add = function() {
           lastId += 1;
 
-          $scope.boxes.push({
+          Storage.addBox({
             id: lastId
           });
+
+          $scope.select({id: lastId});
         };
       }
     };

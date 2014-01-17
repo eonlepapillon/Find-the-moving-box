@@ -9,6 +9,8 @@
     <title>Find the moving box</title>
     <meta name="description" content="Pack for moving and find your stuff while unpacking">
     <meta name="viewport" content="width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -19,7 +21,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="findTheMovingBoxApp">
+  <body ng-app="findTheMovingBoxApp" ng-cloak>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -54,7 +56,10 @@
     <script src="bower_components/ng-i18next/dist/ng-i18next.js"></script>
     <script src="bower_components/i18next/release/i18next-1.7.1.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/annyang/annyang.js"></script>
     <!-- endbower -->
+
+    <script src="bower_components/angular-annyang/angular-annyang.js"></script>
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -65,6 +70,9 @@
         <script src="scripts/controllers/config.js"></script>
         <script src="scripts/directives/boxes.js"></script>
         <script src="scripts/directives/stuff.js"></script>
+        <script src="scripts/services/Storage.js"></script>
+        <script src="scripts/directives/searchStuff.js"></script>
+        <script src="scripts/directives/addStuff.js"></script>
         <!-- endbuild -->
 </body>
 </html>

@@ -1,9 +1,28 @@
 {
-  "brand": "FTMB - $t(__pagename__)",
+  "fullbrand": "Find the moving box - $t(__pagename__)",
+  "brand": "$t(__pagename__)",
   "pack": "Packing",
   "unpack": "Unpacking",
   "config": "Config",
+
   "box": "Box __id__",
   "box_plural": "Boxes",
-  "addBox": "Add a box"
+  "addBox": "Add a box",
+
+  "stuff": {
+    "add":{
+      "button": "Add",
+      "speech": {
+        "command": "Okay *term",
+        "info": "Say \"Okay toilet paper\""
+      }
+    },
+    "search":{
+      "button": "Search",
+      "speech": {
+        "command": "Search *term",
+        "info": "Say \"Search toilet paper\""
+      }
+    }
+  }
 }

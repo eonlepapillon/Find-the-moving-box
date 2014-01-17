@@ -7,10 +7,10 @@ angular.module('findTheMovingBoxApp')
     $scope.buttons = [{
       label: 'pack',
       url: '#/pack',
-      css: 'btn btn-warning'
+      type: 'warning'
     }, {
       label: 'unpack',
       url: '#/unpack',
-      css: 'btn btn-success'
+      type: 'success'
     }];
   });

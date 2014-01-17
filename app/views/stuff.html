@@ -1,1 +1,14 @@
-<p>This is the stuff view.</p>
+<div class="stuff">
+  <div ng-transclude></div>
+
+  <table class="table table-striped table-bordered">
+    <tbody>
+      <tr ng-repeat="thing in stuff | filter:filter | orderBy:order" >
+        <td ng-i18next="[i18next]({id:{{thing.boxid}}})box" class="box"></td>
+        <td>{{thing.term}}</td>
+        <!-- <td><img ng-src="thing.image" title="" ng-show="thing.image" /></td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+

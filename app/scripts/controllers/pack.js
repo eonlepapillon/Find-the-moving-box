@@ -6,16 +6,17 @@ angular.module('findTheMovingBoxApp')
 
     $scope.buttons = [{
       label: 'config',
-      url: '#/config'
+      url: '#/config',
+      type: 'default'
     },{
       label: 'unpack',
       url: '#/unpack',
-      css: 'btn btn-success'
+      type: 'success'
     }];
 
-    $scope.selectedBox = 1;
+    $scope.boxid = 1;
 
     $scope.selectBox = function(id) {
-      $scope.selectedBox = id;
+      $scope.boxid = id;
     };
   });
