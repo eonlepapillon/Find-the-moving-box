@@ -13,14 +13,14 @@
     "add":{
       "button": "Add",
       "speech": {
-        "command": "Okay *term",
+        "command": "okay *term",
         "info": "Say \"Okay toilet paper\""
       }
     },
     "search":{
       "button": "Search",
       "speech": {
-        "command": "Search *term",
+        "command": "search *term",
         "info": "Say \"Search toilet paper\""
       }
     }

@@ -13,14 +13,14 @@
     "add":{
       "button": "Toegevoegen",
       "speech": {
-        "command": "Oké *term",
+        "command": "oké *term",
         "info": "Zeg \"Oké wc papier\""
       }
     },
     "search":{
       "button": "Zoek",
       "speech": {
-        "command": "Zoek *term",
+        "command": "zoek *term",
         "info": "Zeg \"Zoek wc papier\""
       }
     }

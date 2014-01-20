@@ -9,8 +9,23 @@ angular.module('findTheMovingBoxApp')
       scope: {
         boxid: '@'
       },
-      controller: function($scope, Storage) {
+      controller: function($scope, Storage, $i18next, ngAnnyang) {
+        var commands = {};
+
+        commands[$i18next('stuff.add.speech.command')] = function(term) {
+          $scope.term = term;
+          $scope.$digest();
+        };
+
         $scope.button = 'stuff.add.button';
+
+        ngAnnyang.isEnabled(function(enabled) {
+          $scope.speech = enabled;
+          $scope.$digest();
+        });
+        ngAnnyang.addCommands(commands);
+
+
 
         $scope.do = function(thing) {
           if(thing.term.length > 0){
@@ -27,6 +42,12 @@ angular.module('findTheMovingBoxApp')
         $scope.clear = function() {
           $scope.term = '';
         };
+
+        $scope.$on('$destroy', function() {
+          if(commands){
+            ngAnnyang.removeCommands(_.keys(commands));
+          }
+        });
       }
     };
   });

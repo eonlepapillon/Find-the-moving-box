@@ -1,9 +1,8 @@
 <div class="form-group">
   <input type="text" class="stuff-input-term" ng-model="term"/>
-  <span ng-show="speechSearching" class="glyphicon glyphicon-record"></span>
   <button class="btn btn-success" ng-i18next="{{button}}" ng-click="do({term:term})"></button>
 
   <p ng-show='speech' class="help-block">
-    <span class="glyphicon glyphicon-bullhorn"></span> <span ng-i18next="speechInfo"></span>
+    <span class="glyphicon glyphicon-bullhorn"></span> <span ng-i18next="stuff.add.speech.info"></span>
   </p>
 </div>
