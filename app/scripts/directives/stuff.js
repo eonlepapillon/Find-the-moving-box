@@ -13,6 +13,17 @@ angular.module('findTheMovingBoxApp')
       },
       controller: function($scope, Storage) {
         $scope.stuff = Storage.getStuff();
+
+        $scope.remove = function(index) {
+          var thing = $scope.stuff.splice(index, 1)[0];
+
+          $scope.undo = {
+            index: index,
+            thing: thing
+          };
+
+          Storage.removeThing(thing);
+        };
       }
     };
   });

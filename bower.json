@@ -2,21 +2,27 @@
   "name": "find-the-moving-box",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "1.2.6",
+    "angular": "~1.2.13",
     "json3": "~3.2.6",
     "es5-shim": "~2.1.0",
     "jquery": "~1.10.2",
     "sass-bootstrap": "~3.0.2",
-    "angular-resource": "1.2.6",
-    "angular-sanitize": "1.2.6",
-    "angular-route": "1.2.6",
+    "angular-resource": "~1.2.13",
+    "angular-sanitize": "~1.2.13",
+    "angular-route": "~1.2.13",
     "ng-i18next": "~0.2.9",
     "i18next": "~1.7.1",
     "underscore": "~1.5.2",
-    "annyang": "~1.1.0"
+    "annyang": "~1.1.0",
+    "ngAnnyang": "git://github.com/eonlepapillon/ngAnnyang",
+    "angular-touch": "~1.2.13",
+    "angular-animate": "~1.2.13"
   },
   "devDependencies": {
-    "angular-mocks": "1.2.6",
-    "angular-scenario": "1.2.6"
+    "angular-mocks": "~1.2.13",
+    "angular-scenario": "~1.2.13"
+  },
+  "resolutions": {
+    "angular": "1.2.13"
   }
 }

@@ -23,9 +23,8 @@ angular.module('findTheMovingBoxApp')
           $scope.speech = enabled;
           $scope.$digest();
         });
+
         ngAnnyang.addCommands(commands);
-
-
 
         $scope.do = function(thing) {
           if(thing.term.length > 0){

@@ -4,23 +4,25 @@ angular.module('findTheMovingBoxApp')
   .factory('Storage', function ($window) {
     var boxes,
       stuff,
-      saveBoxes = function() {
-        $window.localStorage.boxes = angular.toJson(boxes);
+      ls = $window.localStorage,
+      saveBoxesToLs = function() {
+        ls.boxes = angular.toJson(boxes);
       },
-      saveStuff = function() {
-        $window.localStorage.stuff = angular.toJson(stuff);
+      saveStuffToLs = function() {
+        ls.stuff = angular.toJson(stuff);
       };
 
-    if(!$window.localStorage.boxes){
-      $window.localStorage.boxes = JSON.stringify([{id:1}]);
+    if(!ls.boxes){
+      ls.boxes = JSON.stringify([{id:1}]);
     }
 
-    boxes = JSON.parse($window.localStorage.boxes);
+    boxes = JSON.parse(ls.boxes);
 
-    if(!$window.localStorage.stuff){
-      $window.localStorage.stuff = JSON.stringify([]);
+    if(!ls.stuff){
+      ls.stuff = JSON.stringify([]);
     }
-    stuff = JSON.parse($window.localStorage.stuff);
+
+    stuff = JSON.parse(ls.stuff);
 
     return {
       getLastBox: function() {
@@ -34,14 +36,14 @@ angular.module('findTheMovingBoxApp')
       addBox: function(box) {
         boxes.push(box);
 
-        saveBoxes();
+        saveBoxesToLs();
       },
       removeBox: function(box) {
         boxes = _.reject(boxes, function(b) {
           return b.id === box.id ? true : false;
         });
 
-        saveBoxes();
+        saveBoxesToLs();
       },
       getStuff: function() {
         return stuff;
@@ -49,14 +51,14 @@ angular.module('findTheMovingBoxApp')
       addThing: function(thing) {
         stuff.unshift(thing);
 
-        saveStuff();
+        saveStuffToLs();
       },
       removeThing: function(thing) {
         stuff = _.reject(stuff, function(t) {
-          return t.label === thing.label ? true : false;
+          return (t.term === thing.term && t.boxid === thing.boxid) ? true : false;
         });
 
-        saveStuff();
+        saveStuffToLs();
       }
     };
   });

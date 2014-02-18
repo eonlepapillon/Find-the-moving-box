@@ -1,14 +1,12 @@
 <div class="stuff">
   <div ng-transclude></div>
 
-  <table class="table table-striped table-bordered">
-    <tbody>
-      <tr ng-repeat="thing in stuff | filter:filter | orderBy:order" >
-        <td ng-i18next="[i18next]({id:{{thing.boxid}}})box" class="box"></td>
-        <td>{{thing.term}}</td>
-        <!-- <td><img ng-src="thing.image" title="" ng-show="thing.image" /></td> -->
-      </tr>
-    </tbody>
-  </table>
+  <ul class="list">
+    <li class="list-item" ng-repeat="thing in stuff | filter:filter | orderBy:order" ng-swipe-left="remove($index)">
+      <span ng-i18next="[i18next]({id:{{thing.boxid}}})box" class="box"></span>
+      <span class="term">{{thing.term}}</span>
+      <span class="remove glyphicon glyphicon-remove pull-right" ng-click="remove($index)"></span>
+    </li>
+  </ul>
 </div>
 

@@ -4,6 +4,8 @@ angular.module('findTheMovingBoxApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ngTouch',
+  'ngAnimate',
   'jm.i18next',
   'ngAnnyang'
 ])
